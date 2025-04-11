@@ -21,12 +21,12 @@ public class UsuarioController {
     public ModelAndView usuario(@RequestParam(name = "id") String id,
     HttpServletRequest request) { // Cambié HttpRequest a HttpServletRequest
 
-        ModelAndView mav = new ModelAndView("usuario");
+            ModelAndView mav = new ModelAndView("usuario");
 
-        UsuarioDTO usuario = usuarioDAO.getUsuario(id); // Suponiendo que ya tienes usuarioDAO configurado
+            UsuarioDTO usuario = usuarioDAO.getUsuario(id); // Suponiendo que ya tienes usuarioDAO configurado
 
-        mav.addObject("usuario", usuario); // Pasar el objeto usuario a la vista
+            mav.addObject("usuario", usuario); // Pasar el objeto usuario a la vista
 
-        return mav;
+            return mav;
     }
 }
